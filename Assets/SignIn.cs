@@ -12,12 +12,39 @@ public class SignIn : MonoBehaviour
     [SerializeField] private Button SignInButton;
     [SerializeField] private Text ErrorText;
 
-    [SerializeField] private UserData _userData;
-    // Start is called before the first frame update
     private Firebase.Auth.FirebaseAuth auth;
+    private FirebaseUser user;
+
     void Start()
     {
         auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
+        auth.StateChanged += AuthStateChanged;
+        AuthStateChanged(this, null);
+    }
+
+    // Track state changes of the auth object.
+    void AuthStateChanged(object sender, System.EventArgs eventArgs)
+    {
+        if (auth.CurrentUser != user)
+        {
+            bool signedIn = user != auth.CurrentUser && auth.CurrentUser != null;
+            if (!signedIn && user != null)
+            {
+                Debug.Log("Signed out " + user.UserId);
+            }
+
+            user = auth.CurrentUser;
+            if (signedIn)
+            {
+                Debug.Log("Signed in " + user.UserId);
+            }
+        }
+    }
+
+    void OnDestroy()
+    {
+        auth.StateChanged -= AuthStateChanged;
+        auth = null;
     }
 
     // Update is called once per frame
@@ -29,16 +56,15 @@ public class SignIn : MonoBehaviour
     {
         string email = EmailInputField.text;
         string password = PasswordInputField.text;
-        FirebaseUser user = TrySingIn(email, password);
-            UserData userData = _userData;
-            DontDestroyOnLoad(userData);
-            SceneManager.LoadScene("SampleScene");
+        user = TrySingIn(email, password);
+        DontDestroyOnLoad(this);
+        SceneManager.LoadScene("SampleScene");
     }
 
     private FirebaseUser TrySingIn(string email, string password)
     {
         FirebaseUser newUser = null;
-        
+
         auth.SignInWithEmailAndPasswordAsync(email, password).ContinueWith(task =>
         {
             if (task.IsCanceled)
@@ -61,7 +87,7 @@ public class SignIn : MonoBehaviour
             Debug.LogFormat("User signed in successfully: {0} ({1})",
                 newUser.DisplayName, newUser.UserId);
         });
-        
+
         return newUser;
     }
 }
