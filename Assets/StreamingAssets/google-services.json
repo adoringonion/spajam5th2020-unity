@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "877513435087",
+    "firebase_url": "https://oda-kazumasa.firebaseio.com",
+    "project_id": "oda-kazumasa",
+    "storage_bucket": "oda-kazumasa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:877513435087:android:857d6d09ef0ea6d2ea54ba",
+        "android_client_info": {
+          "package_name": "com.tsubuyaki.odakazumasa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "877513435087-kkr1ejvc978k7mmjertmpfu64uc5j6rr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tsubuyaki.odakazumasa",
+            "certificate_hash": "60aa38b2c2cc3a28be8531b5805b0c57285f3235"
+          }
+        },
+        {
+          "client_id": "877513435087-ajjjgnngsuig6a1go2sdqk8uc2o4hpae.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZS-87MwReX2vc7jpn7qV-B46c-7oz1ww"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "877513435087-ajjjgnngsuig6a1go2sdqk8uc2o4hpae.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
