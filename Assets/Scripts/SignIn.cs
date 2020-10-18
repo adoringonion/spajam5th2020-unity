@@ -15,6 +15,9 @@ public class SignIn : MonoBehaviour
     private Firebase.Auth.FirebaseAuth auth;
     private FirebaseUser user;
 
+    [SerializeField]
+    private GameObject webView;
+
     void Start()
     {
         auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
@@ -48,17 +51,17 @@ public class SignIn : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-    }
 
     public void SignInButtonPress()
     {
+        webView.SetActive(true);
+        /*
         string email = EmailInputField.text;
         string password = PasswordInputField.text;
         user = TrySingIn(email, password);
         DontDestroyOnLoad(this);
         SceneManager.LoadScene("Scenes/Main");
+        */
     }
 
     private FirebaseUser TrySingIn(string email, string password)
