@@ -58,7 +58,7 @@ public class SignIn : MonoBehaviour
         string password = PasswordInputField.text;
         user = TrySingIn(email, password);
         DontDestroyOnLoad(this);
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Scenes/Main");
     }
 
     private FirebaseUser TrySingIn(string email, string password)
