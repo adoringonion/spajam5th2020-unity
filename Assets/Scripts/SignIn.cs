@@ -54,7 +54,7 @@ public class SignIn : MonoBehaviour
 
     public void SignInButtonPress()
     {
-        webView.SetActive(true);
+        SceneManager.LoadScene("Scenes/Main");
         /*
         string email = EmailInputField.text;
         string password = PasswordInputField.text;
