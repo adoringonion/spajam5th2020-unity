@@ -4253,6 +4253,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tap Button (LeanButton) (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2755254652901389940, guid: 065d9eaf0c401904ab68e7f6cf065a2f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2755254652902241994, guid: 065d9eaf0c401904ab68e7f6cf065a2f, type: 3}
       propertyPath: Data.Color.r
       value: 1
@@ -11707,15 +11711,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2755254652032561753, guid: 065d9eaf0c401904ab68e7f6cf065a2f, type: 3}
       propertyPath: m_Text
-      value: Play
+      value: "\u601D\u3044\u51FA\u3092\u632F\u308A\u8FD4\u308B"
       objectReference: {fileID: 0}
     - target: {fileID: 2755254652032561753, guid: 065d9eaf0c401904ab68e7f6cf065a2f, type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 89
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 2755254652032561753, guid: 065d9eaf0c401904ab68e7f6cf065a2f, type: 3}
       propertyPath: m_FontData.m_MaxSize
-      value: 89
+      value: 94
       objectReference: {fileID: 0}
     - target: {fileID: 2755254652053936018, guid: 065d9eaf0c401904ab68e7f6cf065a2f, type: 3}
       propertyPath: m_Color.r
@@ -11815,19 +11819,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2755254652901389939, guid: 065d9eaf0c401904ab68e7f6cf065a2f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 801
+      value: 766.5
       objectReference: {fileID: 0}
     - target: {fileID: 2755254652901389939, guid: 065d9eaf0c401904ab68e7f6cf065a2f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 467
+      value: 465.21
       objectReference: {fileID: 0}
     - target: {fileID: 2755254652901389939, guid: 065d9eaf0c401904ab68e7f6cf065a2f, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 250
+      value: 319.00537
       objectReference: {fileID: 0}
     - target: {fileID: 2755254652901389939, guid: 065d9eaf0c401904ab68e7f6cf065a2f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 127.60214
       objectReference: {fileID: 0}
     - target: {fileID: 2755254652901389939, guid: 065d9eaf0c401904ab68e7f6cf065a2f, type: 3}
       propertyPath: m_AnchorMin.x
@@ -24243,6 +24247,10 @@ PrefabInstance:
     - target: {fileID: 2755254652901389940, guid: 065d9eaf0c401904ab68e7f6cf065a2f, type: 3}
       propertyPath: m_Name
       value: Tap Button (LeanButton) (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2755254652901389940, guid: 065d9eaf0c401904ab68e7f6cf065a2f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2755254652902241994, guid: 065d9eaf0c401904ab68e7f6cf065a2f, type: 3}
       propertyPath: Data.Color.r
